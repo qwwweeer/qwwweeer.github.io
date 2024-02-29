@@ -1,0 +1,438 @@
+@charset "utf-8"; /*в стилях используем utf-8*/
+* /*Стиль для всего документа*/
+{
+  margin: 0; /*внешний отступ*/
+  padding: 0; /*внутришний отступ*/
+  outline: none; /*ни кокой обводки для полей при нажатии*/
+}
+
+html /*стиль для блока html*/
+{
+  height: 100%; /*высота*/
+}
+
+body /*тело сайта*/
+{
+  width: 100%; /*ширина */
+  height: 100%; /*высота*/
+  color: #999999; /*цвет шрифтов*/
+  background: #f7f7f7; /*фон*/
+  font-size: 1em; /*текст будет уменьшатся от того на каком девайся наш пользователь зайдет на наш сайт*/
+  font-family: "Segoe UI", sans-serif ; /*стиль шрифта, и подборка саммого близкого шрифта если того что мы указали у пользователя не будет*/
+  line-height: 135%;
+}
+
+/*стиль под фон*/
+body html
+{
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+/*задний фон видео*/
+#video-bg 
+{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+
+/*для ссылок*/
+a
+{
+ color: #f48b8b; /*цвет ссылок*/
+ text-decoration: none; /*не применять не какого стиля для них*/
+
+ /*для того чтоб корректно отображались в разных браузерах*/
+ transition: all.6s ease; 
+ -moz-transition: all.6s ease;
+ -webkit-transition:  all.6s ease;
+ -ms-transition:  all.6s ease;
+}
+
+a:hover/*для ссылок при навидении*/
+{
+    color: #8b9ff5; /*цвет ссылок*/
+    text-decoration: none; /*не применять не какого стиля для них*/
+    
+    /*для того чтоб корректно отображались в разных браузерах*/
+    transition: all.6s ease; 
+    -moz-transition: all.6s ease;
+    -webkit-transition:  all.6s ease;
+    -ms-transition:  all.6s ease;
+}
+
+a:active/*для ссылок при нажатии*/
+{
+    color: #8ce4a6; /*цвет ссылок*/
+}
+
+/*стили для всех изображений*/
+img 
+{
+   max-width: 100%; /*максимальная шырина, чтоб нее когда не вылазило за наш блок*/ 
+   height: auto; /*высота будет автоматически подстраиватся*/ 
+   width: auto\9; /*чтоб корректно сжимало наше изображение*/
+}
+
+/*стили для всех горизонтальных линий*/
+hr 
+{
+  display: block; /*делаем как бы ее блоком*/
+  border: 0; /*размер обводка*/
+  height: 1px; /*высота линии*/
+  border-top: 1px solid #ccc; /*верхня граница линни, размер, тип, цвет*/
+  padding: 0; /*внутришнии оступы*/
+}
+
+.left /*футер (все права защищены)*/
+{
+   float: left; /*будет слева*/
+}
+.right /*Регистрация, вход*/
+{
+    float: right; /*будет справа*/
+}
+.clear 
+{
+  clear: both;
+}
+
+/*Selection Block создадим стили котоыре применятся при выдилении какого то текста*/
+::selection{background:#f58b8b; color:#fff /*фон выдиления, цвет текста*/}
+::-moz-election{background:#f58b8b; color:#fff /*фон выдиления, цвет текста*/}
+::-webkit-election{background:#f58b8b; color:#fff /*фон выдиления, цвет текста*/}
+::-ms-election{background:#f58b8b; color:#fff /*фон выдиления, цвет текста*/}
+
+/*шапка и низ сайта*/
+header,footer 
+{
+   width: 98%; /*ширина*/
+   background-color: transparent; /*цвет*/
+   float:  left; /*налажевание с лева*/
+   backdrop-filter: blur(10px); /* Размытие фона блока */
+
+}
+
+/*шапка*/
+header 
+{
+  border-bottom: 2px solid #585757; /*розмер нижней обводки,стиль цвет*/
+  padding: 1%; /*внешний отступ с лева и справа будут по 1 проценту*/
+}
+
+#logo/*стили для нашего лога*/
+{
+ font-size: 2em; /*розмер*/
+ font-family: Comic Sans MS, sans-serif; /*стиль шрифта, и подбор похожего*/
+ color:silver; /*цвето нашего лого*/
+}
+
+.contact /*стили для нешего контакт*/
+{
+    font-size: 1.5em; /*розмер*/
+    font-family: Comic Sans MS, sans-serif; /*стиль шрифта, и подбор похожего*/
+    margin-left: 20px; /*внешний отступ слева 10 пикселей*/
+}
+
+/*стли для меню*/
+#menu
+{
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00e5, 0 0 70px #ff00e5, 0 0 80px #ff00e5, 0 0 100px #ff00e5; /* Эффект свечения текста */
+  color: #fcffff;/*цвет*/
+  font-family: Comic Sans MS, sans-serif ; /*шрифт, подборка похожего шривта в случаи если у пользователя не будет такого*/
+  font-size: 1.7em; /*размер шрифта*/
+}
+
+#menu hr /* для меню и горизонтальной линии*/
+{
+  width: 500px; /*ширина*/
+  max-width: 100%; /*максимальная ширина, если ширина будет больше чем 500пиксель, то максимально она будет вписоватся в розмер экрана*/
+  margin-top: 5px; /*внешний отступ с верху*/ 
+  padding-bottom: 8px; /*внутришний оступ  с низу*/
+}
+
+
+#menuHrefs a /*стили для ссылок меню*/
+{
+  padding: 5px; /*внутрешний отступ*/
+  border-radius: 5px; /*закругленность обводки*/
+  margin-right: 5px; /*внешний отступ справа*/
+  color: #fcffff /*цвет*/
+}
+
+#menuHrefs a:hover /*стили для ссылок меню при наведении*/
+{
+  background-color: #e8e8e8;  /*задний фон*/
+}
+
+/*Основнные стили для сайта */
+#wrapper
+{
+  float: left; /*будет позиционироватся с лева*/
+  width: 100%; /*ширина будет на весь экран*/
+  margin-top: 15px; /*внешний оступ с верху*/
+}
+
+/*общий стиль розмещения для наших статей*/
+#wrapper #articles 
+{
+ float: left; /*будут начинать налажоватся слева*/
+ width: 80%;  /*ширина 80 процентов экрана*/
+ margin-left: 10%; /*внешний отступ с лева 10 процентов*/
+} 
+
+/*стиль именно для статтей, как они будут выглядить*/
+#wrapper #articles article
+{
+  float: left; /*будут начинать налажоватся от легого края*/
+  width: 31.33333%; /*ширина*/
+  border: 1px solid rgba(192, 192, 192, 0.123); /*розмер обводки, тип, цвет*/
+  box-sizing: border-box; /*чтоб наш бордер вписовался в нашу ширину*/
+  border-radius: 5px; /*закрукленность обводки*/
+  background-color: rgba(255, 255, 255, 0.027); /* Цвет фона с уровнем прозрачности */
+  backdrop-filter: blur(10px); /* Размытие фона блока */
+  margin-right: 2%; /*внешний оступ справа*/
+  min-height: 400px; /*минимальная высота*/
+}
+/*стили для наших изображений*/
+#wrapper #articles article img
+{
+  width: 100%; /*ширина*/
+  height: 250px; /*высота*/
+  border-radius: 5px 5px 0px 0px ; /* закругленность обводки*/
+  border-bottom:  1px solid rgba(192, 192, 192, 0.123); /*розмер, тип, цвет обводки*/
+  margin-bottom: 10px; /*внешний нижний отступ*/
+}
+
+/*стили для заголовков*/
+#wrapper #articles article h2
+{
+  width: 90%;  /*ширина*/
+  margin-left: 5%; /*внешний отступ слева*/
+  font-weight: normal ; /*жирность шрифта*/
+  font-size: 1.7em; /*размер*/
+  color: #fcffff94; /*цвет*/
+}
+
+/*стили для вступительного текста*/
+#wrapper #articles article p
+{
+  margin-top: 10px; /*внешний отступ с верху*/
+  width: 80%;  /*ширина*/
+  margin-left: 10%; /*внешний отступ слева*/
+  text-indent: 1em; /*остсуп для абзаца*/
+  color: #fcffff94; /*цвет*/
+}
+
+/*стили для ссылок читать далее*/
+#wrapper #articles article a
+{
+  padding: 5px; /*внешний отступ */
+  background-color: #ed7b7b ; /*фон*/
+  margin-left: 5%; /*внешний отступ слева*/
+  border-radius: 5px; /*закругленность*/
+  color: #fff; /*цвет*/
+  float: left; /*наложение с лева*/
+  margin-top: 10px ; /*внешний отступ сверху*/
+  margin-bottom: 10px;  /*внешний отступ cнизу*/
+}
+/*стили для ссылок читать далее эфект при навидении*/
+#wrapper #articles article a:hover
+{
+  background-color: #7feb6d ; /*фон*/
+}
+
+/*Стили для странички "О нас"*/
+.about
+{
+  margin-left: 4%;
+  display: inline-block;
+  padding: 20px;
+  background-color: rgba(0, 128, 0, 0); /* Прозрачный и розмытый зеленый фон */
+  border: 1px solid #585757;
+  border-radius: 5px; /* Округление углов */
+  backdrop-filter: blur(5px); /* Размытие фона */
+}
+
+.text 
+{
+  font-family: Arial, sans-serif;
+  color: rgb(206, 206, 206); /* Белый цвет текста */
+  font-size: 18px; /* Размер текста */
+  text-shadow: 0 0 5px #263a26; /* Светящаяся тень текста (зеленый цвет) */
+}
+
+/*Стили для странички "помочь в развитии"*/
+.help
+{
+  margin-left: 10%;
+  display: inline-block;
+  padding: 20px;
+  background-color: rgba(0, 128, 0, 0); /* Прозрачный и розмытый зеленый фон */
+  border: 1px solid #959695; /* Светящаяся зеленая обводка */
+  border-radius: 5px; /* Округление углов */
+  backdrop-filter: blur(5px); /* Размытие фона */
+}
+
+.help .text 
+{
+  font-family: Arial, sans-serif;
+  color: rgb(206, 206, 206); /* Белый цвет текста */
+  font-size: 18px; /* Размер текста */
+  text-shadow: 0 0 5px #263a26; /* Светящаяся тень текста (зеленый цвет) */
+}
+
+/*Стили для странички контакты*/
+#Contact_M 
+{
+  text-align: center; /* Центрирование содержимого по горизонтали */
+  padding: 0px; /* Отступы внутри блока */
+  background-color: transparent; /* Прозрачный цвет фона */
+  backdrop-filter: blur(5px); /* Размытие фона */
+  display: inline-block; /* Позволяет блоку занимать только необходимое пространство */
+
+  border: 1px solid #585757; /* Обводка блока внутри #Contact_M */
+  border-radius: 6px; /* Закругление углов блока */
+  margin-left: 39.5%;
+
+}
+
+#Contact_M img 
+{
+  max-width: 100%; /* Максимальная ширина изображения */
+  height: 450px; /* Автоматическая высота для сохранения пропорций */
+  display: block; /* Убираем лишние пробелы вокруг изображения */
+  border-radius: 6px; /* Закругление углов изображения */
+}
+
+#Contact_M a 
+{
+  display: block; /* Размещаем текст "Связаться с нами" на новой строке */
+  margin-bottom: 10px;
+}
+
+
+/*стили для странички "Услуги"*/
+.services 
+{
+  text-align: left;
+  border: 1px solid #585757;
+  border-radius: 2px;
+  padding: 0px;
+  width: 600px;
+  background-color: transparent; /* Прозрачный цвет фона */
+  backdrop-filter: blur(5px); /* Размытие фона */
+  margin-left: 33%;
+}
+
+.content 
+{
+  display: flex;
+  align-items: center;
+}
+
+.image-wrapper {
+  margin-right: 20px;
+}
+
+.image-wrapper img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+}
+
+.text-wrapper {
+  flex: 1; /* Занимает оставшееся пространство */
+}
+
+.text-wrapper .text 
+{
+  font-family: Arial, sans-serif;
+  color: rgb(206, 206, 206); /* Белый цвет текста */
+  font-size: 18px; /* Размер текста */
+  text-shadow: 0 0 5px #263a26; /* Светящаяся тень текста (зеленый цвет) */
+  margin-left: 27px;
+}
+
+/*Центральный блок */
+#main_soc_block 
+{
+  width: 100%; /*ширина*/
+  padding: 2% 0; /*внутришний оступ 2-по высоте 0-по ширине*/
+  border-bottom:2px solid,silver; /*нишняя обводка розмер, тип, цвет*/
+  border-top:2px solid,silver; /*верхнея обводка розмер, тип, цвет*/
+  margin: 20px 0;  /*внешний остпуп  20-по высоте, 0-по ширине*/
+  float: left; /*налаживание с лева*/
+  backdrop-filter: blur(10px);
+  height: 115px; /*высота*/
+}
+
+/*Внутри центрально блока */
+#main_soc_block_in 
+{
+  text-align: center; /*место розмещение текста*/
+  padding: 1px; /*внутришний отступ*/
+  color: rgba(255, 255, 255, 0.7); /*полупрозрачный текст с белым оттенком*/
+  height: 100px;  /*высота*/
+  border-radius: 7px; /*закругленность*/
+  width: 500px; /*ширина*/
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.9); 
+}
+
+/*ссылка в внутри центрольно блока регестрируйтесь*/
+#main_soc_block_in a
+{
+  padding: 5px; /*внешний отступ */
+  margin-left: 40%; /*внешний отступ слева*/
+  border-radius: 5px; /*закругленность*/
+  color: #f8f1ff; /*цвет*/
+  float: left; /*наложение с лева*/
+  margin-top: 22px ; /*внешний отступ сверху*/
+  margin-bottom: 10px;  /*внешний отступ cнизу*/
+  text-decoration: none; /* Убираем подчеркивание ссылки */
+  text-shadow: 0 0 10px rgba(148, 0, 211, 0.8); /* Эффект свечения текста */
+}
+/*при навидении*/
+#main_soc_block_in a:hover { text-shadow: 0 0 10px rgba(3, 250, 3, 0.8); /* Эффект свечения при наведении */}
+
+
+/*Стили для футера*/
+/*низ сайта*/
+footer 
+{
+  padding: 1%; /*внешний отступ с лева и справа будут по 1 проценту*/
+  margin-top: 10px; /* внешний отступ с верху */
+  border-top: 2px solid #585757; /*розмер верхней обводки,стиль цвет*/
+  padding-bottom: 1.5%; /*внутришний отступ cнизу */
+  height: 100%;
+}
+
+
+
+#page-wrap:after /*после это id*/
+{
+  content:"";
+  display: block; /*делаем как бы точто после этого id блоком*/
+}
+
+/*низ сайта, и после нашего айди что идет перед футером */
+footer, #page-wrap:after
+{
+  height: 10px; /*высота*/
+}
+
+/*айди которое идет перед футером*/
+#page-wrap
+{
+  min-height: 93%; /*минимальная высота*/
+  margin-bottom: -10px; /*внешний отступ -10 (нашего футера)*/
+}
